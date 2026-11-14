@@ -1,0 +1,144 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --bridge-bg: #F6F7F4;
+  --bridge-card: #FFFFFF;
+  --bridge-surface-subtle: #EFF2EF;
+  --bridge-border: #DCE2DF;
+  --bridge-teal: #0E6E6B;
+  --bridge-teal-solid: #0E6E6B;
+  --bridge-teal-hover: #0B5956;
+  --bridge-teal-soft: #E3F1EF;
+  --bridge-on-teal: #FFFFFF;
+  --bridge-amber: #B86E00;
+  --bridge-amber-soft: #FEF4E4;
+  --bridge-grey: #8A9693;
+  --bridge-grey-soft: #EEF1F0;
+  --bridge-danger: #B42318;
+  --bridge-danger-soft: #FEF3F2;
+  --bridge-text: #16201F;
+  --bridge-text-secondary: #55615F;
+  --bridge-focus: #0E6E6B;
+  --bridge-chart-muted: #C8D4D1;
+
+  --bridge-font-heading: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --bridge-font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --bridge-text-scale: 1;
+  --bridge-line-height: 1.6;
+  --bridge-letter-spacing: 0em;
+}
+
+.dark {
+  --bridge-bg: #101716;
+  --bridge-card: #182221;
+  --bridge-surface-subtle: #1F2B2A;
+  --bridge-border: #2C3B39;
+  --bridge-teal: #4FD1CB;
+  --bridge-teal-solid: #0E6E6B;
+  --bridge-teal-hover: #138581;
+  --bridge-teal-soft: #163332;
+  --bridge-on-teal: #FFFFFF;
+  --bridge-amber: #F59E0B;
+  --bridge-amber-soft: #33240B;
+  --bridge-grey: #9AA7A4;
+  --bridge-grey-soft: #222D2B;
+  --bridge-danger: #F97066;
+  --bridge-danger-soft: #381A18;
+  --bridge-text: #F0F4F3;
+  --bridge-text-secondary: #B0BEBB;
+  --bridge-focus: #4FD1CB;
+  --bridge-chart-muted: #324441;
+}
+
+.high-contrast:not(.dark) {
+  --bridge-bg: #FFFFFF;
+  --bridge-card: #FFFFFF;
+  --bridge-surface-subtle: #F2F4F3;
+  --bridge-border: #16201F;
+  --bridge-teal: #064E4B;
+  --bridge-teal-solid: #064E4B;
+  --bridge-teal-hover: #043B39;
+  --bridge-teal-soft: #D3ECE8;
+  --bridge-on-teal: #FFFFFF;
+  --bridge-amber: #8A4F00;
+  --bridge-amber-soft: #FDE8C8;
+  --bridge-grey: #4A5452;
+  --bridge-grey-soft: #E5E9E8;
+  --bridge-danger: #911A11;
+  --bridge-danger-soft: #FDE4E1;
+  --bridge-text: #000000;
+  --bridge-text-secondary: #1F2928;
+  --bridge-focus: #000000;
+  --bridge-chart-muted: #6C7875;
+}
+
+.high-contrast.dark {
+  --bridge-bg: #000000;
+  --bridge-card: #0A0E0E;
+  --bridge-surface-subtle: #141C1B;
+  --bridge-border: #FFFFFF;
+  --bridge-teal: #5CE1DB;
+  --bridge-teal-solid: #5CE1DB;
+  --bridge-teal-hover: #83EDE8;
+  --bridge-teal-soft: #0D3331;
+  --bridge-on-teal: #000000;
+  --bridge-amber: #FBBF24;
+  --bridge-amber-soft: #3B2704;
+  --bridge-grey: #D1DAD8;
+  --bridge-grey-soft: #1D2625;
+  --bridge-danger: #FCA5A5;
+  --bridge-danger-soft: #450A0A;
+  --bridge-text: #FFFFFF;
+  --bridge-text-secondary: #E2E8E7;
+  --bridge-focus: #FFFFFF;
+  --bridge-chart-muted: #5C6B68;
+}
+
+html {
+  font-size: calc(16px * var(--bridge-text-scale));
+}
+
+body {
+  background-color: var(--bridge-bg);
+  color: var(--bridge-text);
+  font-family: var(--bridge-font-body);
+  line-height: var(--bridge-line-height);
+  letter-spacing: var(--bridge-letter-spacing);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, .font-heading {
+  font-family: var(--bridge-font-heading);
+}
+
+.font-readable-atkinson {
+  --bridge-font-body: "Atkinson Hyperlegible", ui-sans-serif, system-ui, sans-serif;
+}
+
+.font-readable-lexend {
+  --bridge-font-body: "Lexend", ui-sans-serif, system-ui, sans-serif;
+}
+
+.spacing-wide {
+  --bridge-line-height: 1.85;
+  --bridge-letter-spacing: 0.025em;
+}
+
+.reduce-motion *,
+.reduce-motion *::before,
+.reduce-motion *::after {
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001ms !important;
+  scroll-behavior: auto !important;
+}
+
+:focus-visible {
+  outline: 3px solid var(--bridge-focus);
+  outline-offset: 2px;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}

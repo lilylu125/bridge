@@ -1,0 +1,6 @@
+{
+  "name": "Bridge",
+  "description": "A calm, accessible study companion for first-year Intro Chemistry students.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
